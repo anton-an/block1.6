@@ -9,20 +9,20 @@
   <link href="style.css" rel="stylesheet"></head>
   <body class="page">
     <header class="header">
-      <button class="header__button button--burger button" href="#"></button>
+      <button class="header__button button--burger button" type="button"></button>
       <a class="header__logo" href="index.html">
         <img src="./img/logo.svg" alt="CPS logo">
       </a>
       <span class="header__divider divider"></span>
       <ul class="header__contacts">
         <li class="header__item">
-          <a class="header__button button--call button" href="#"></a>
+          <button class="header__button button--call button" type="button"></button>
         </li>
         <li class="header__item">
-          <a class="header__button button--chat button" href="#"></a>
+          <button class="header__button button--chat button" type="button"></button>
         </li>
         <li class="header__item">
-          <a class="header__button button--profile button" href="#"></a>
+          <button class="header__button button--profile button" type="button"></button>
         </li>
         <li class="header__item">
           <span class="header__divider divider"></span>
@@ -133,12 +133,12 @@
         </ul>
       </nav>
       <section class="content__about about">
-        <div class="about__text">
-          <p>
+        <div class="about__description">
+          <p class="about__text">
             Мы являемся авторизованным сервисным центром по ремонту техники Dell.
             Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
           </p>
-          <p>
+          <p class="about__text">
             Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера,
             что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и,
             в свою очередь, советуют нас родным и близким.
@@ -147,16 +147,14 @@
             <span class="expand-button__icon"></span>Читать далее
           </button>
         </div>
-        <div class="about__image">
-          <img src="./img/CPS-photo.png" alt="CPS" class="image">
-        </div>
+        <img class="about__image" src="./img/CPS-photo.png" alt="CPS">
       </section>
       <section class="content__brands brands">
         <div class="brands__heading section-heading">
           <h2 class="brands__title title--small">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</h2>
         </div>
-        <div class="brands__slider slider swiper">
-          <ul class="brands__brands-list slider__wrapper swiper-wrapper">
+        <div class="brands__slider swiper">
+          <ul class="brands__brands-list swiper-wrapper">
             <li class="brands__brand brand brand--lenovo swiper-slide">
               <button class="brand__button button--select"></button>
             </li>
@@ -246,53 +244,216 @@
           <h2 class="prices__title title--small">ЦЕНЫ НА УСЛУГИ</h2>
         </div>
         <div class="prices__slider slider swiper">
-          <ul class="prices__prices-list slider__wrapper swiper-wrapper">
-            <li class="prices__price price slider__item swiper-slide">
-              <h4 class="price__title title--small">Ремонтные услуги</h4>
-              <p class="price__description">Тестирование с выдачей технического заключения</p>
-              <h4 class="price__title title--small">Цена</h4>
-              <p class="price__description">Бесплатно</p>
-              <h4 class="price__title title--small">Срок</h4>
-              <p class="price__description">30-120 мин</p>
-              <button class="price__button button--submit">Заказать</button>
-            </li>
-            <li class="prices__price price slider__item swiper-slide">
-              <h4 class="price__title title--small">Ремонтные услуги</h4>
-              <p class="price__description">Тестирование с выдачей технического заключения</p>
-              <h4 class="price__title title--small">Цена</h4>
-              <p class="price__description">Бесплатно</p>
-              <h4 class="price__title title--small">Срок</h4>
-              <p class="price__description">30-120 мин</p>
-              <button class="price__button button--submit">Заказать</button>
-            </li>
-            <li class="prices__price price slider__item swiper-slide">
-              <h4 class="price__title title--small">Ремонтные услуги</h4>
-              <p class="price__description">Тестирование с выдачей технического заключения</p>
-              <h4 class="price__title title--small">Цена</h4>
-              <p class="price__description">Бесплатно</p>
-              <h4 class="price__title title--small">Срок</h4>
-              <p class="price__description">30-120 мин</p>
-              <button class="price__button button--submit">Заказать</button>
-            </li>
-            <li class="prices__price price slider__item swiper-slide">
-              <h4 class="price__title title--small">Ремонтные услуги</h4>
-              <p class="price__description">Тестирование с выдачей технического заключения</p>
-              <h4 class="price__title title--small">Цена</h4>
-              <p class="price__description">Бесплатно</p>
-              <h4 class="price__title title--small">Срок</h4>
-              <p class="price__description">30-120 мин</p>
-              <button class="price__button button--submit">Заказать</button>
-            </li>
-            <li class="prices__price price slider__item swiper-slide">
-              <h4 class="price__title title--small">Ремонтные услуги</h4>
-              <p class="price__description">Тестирование с выдачей технического заключения</p>
-              <h4 class="price__title title--small">Цена</h4>
-              <p class="price__description">Бесплатно</p>
-              <h4 class="price__title title--small">Срок</h4>
-              <p class="price__description">30-120 мин</p>
-              <button class="price__button button--submit">Заказать</button>
-            </li>
-          </ul>
+          <div class="prices__prices-list slider__wrapper swiper-wrapper">
+            <table class="prices__table-heading">
+              <tr>
+                <td>
+                  Ремонтные услуги
+                </td>
+                <td>
+                  Цена
+                </td>
+                <td>
+                  Срок
+                </td>
+              </tr>
+            </table>
+            <table class="prices__price price slider__item swiper-slide">
+              <tbody class="price__table-body">
+              <tr class="price__title-row">
+                <th class="price__service-title title--small">
+                  Ремонтные услуги
+                </th>
+              </tr>
+              <tr class="price__service">
+                <td class="price__text">
+                  Диагностика
+                </td>
+              </tr>
+              <tr class="price__title-row">
+                <th class="price__value-title title--small">
+                  Цена
+                </th>
+              </tr>
+              <tr class="price__value">
+                <td class="price__text">
+                  Бесплатно
+                </td>
+              </tr>
+              <tr class="price__title-row">
+                <th class="price__deadline-title title--small">
+                  Срок
+                </th>
+              </tr>
+              <tr class="price__deadline">
+                <td class="price__text">
+                  30-120 мин
+                </td>
+              </tr>
+              <tr class="price__order">
+                <td class="price__table-cell">
+                  <button class="price__button button--submit">Заказать</button>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+            <table class="prices__price price slider__item swiper-slide">
+              <tbody class="price__table-body">
+              <tr class="price__title-row">
+                <th class="price__service-title title--small">
+                  Ремонтные услуги
+                </th>
+              </tr>
+              <tr class="price__service">
+                <td class="price__text">
+                  Диагностика за тыщу
+                </td>
+              </tr>
+              <tr class="price__title-row">
+                <th class="price__value-title title--small">
+                  Цена
+                </th>
+              </tr>
+              <tr class="price__value">
+                <td class="price__text">
+                  1000 ₽
+                </td>
+              </tr>
+              <tr class="price__title-row">
+                <th class="price__deadline-title title--small">
+                  Срок
+                </th>
+              </tr>
+              <tr class="price__deadline">
+                <td class="price__text">
+                  30-120 мин
+                </td>
+              </tr>
+              <tr class="price__order">
+                <td class="price__table-cell">
+                  <button class="price__button button--submit">Заказать</button>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+            <table class="prices__price price slider__item swiper-slide">
+              <tbody class="price__table-body">
+              <tr class="price__title-row">
+                <th class="price__service-title title--small">
+                  Ремонтные услуги
+                </th>
+              </tr>
+              <tr class="price__service">
+                <td class="price__text">
+                  Диагностика за полторы тыщи
+                </td>
+              </tr>
+              <tr class="price__title-row">
+                <th class="price__value-title title--small">
+                  Цена
+                </th>
+              </tr>
+              <tr class="price__value">
+                <td class="price__text">
+                  1500 ₽
+                </td>
+              </tr>
+              <tr class="price__title-row">
+                <th class="price__deadline-title title--small">
+                  Срок
+                </th>
+              </tr>
+              <tr class="price__deadline">
+                <td class="price__text">
+                  30-120 мин
+                </td>
+              </tr>
+              <tr class="price__order">
+                <td class="price__table-cell">
+                  <button class="price__button button--submit">Заказать</button>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+            <table class="prices__price price slider__item swiper-slide">
+              <tbody class="price__table-body">
+              <tr class="price__title-row">
+                <th class="price__service-title title--small">
+                  Ремонтные услуги
+                </th>
+              </tr>
+              <tr class="price__service">
+                <td class="price__text">
+                  Диагностика за две двести
+                </td>
+              </tr>
+              <tr class="price__title-row">
+                <th class="price__value-title title--small">
+                  Цена
+                </th>
+              </tr>
+              <tr class="price__value">
+                <td class="price__text">
+                  2200 ₽
+                </td>
+              </tr>
+              <tr class="price__title-row">
+                <th class="price__deadline-title title--small">
+                  Срок
+                </th>
+              </tr>
+              <tr class="price__deadline">
+                <td class="price__text">
+                  30-120 мин
+                </td>
+              </tr>
+              <tr class="price__order">
+                <td class="price__table-cell">
+                  <button class="price__button button--submit">Заказать</button>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+            <table class="prices__price price slider__item swiper-slide">
+              <tbody class="price__table-body">
+              <tr class="price__title-row">
+                <th class="price__service-title title--small">
+                  Ремонтные услуги
+                </th>
+              </tr>
+              <tr class="price__service">
+                <td class="price__text">
+                  Диагностика почти за тыщу
+                </td>
+              </tr>
+              <tr class="price__title-row">
+                <th class="price__value-title title--small">
+                  Цена
+                </th>
+              </tr>
+              <tr class="price__value">
+                <td class="price__text">
+                  990 ₽
+                </td>
+              </tr>
+              <tr class="price__title-row">
+                <th class="price__deadline-title title--small">
+                  Срок
+                </th>
+              </tr>
+              <tr class="price__deadline">
+                <td class="price__text">
+                  30-120 мин
+                </td>
+              </tr>
+              <tr class="price__order">
+                <td class="price__table-cell">
+                  <button class="price__button button--submit">Заказать</button>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
           <div class="prices__pagination slider__pagination swiper-pagination"></div>
         </div>
         <p class="prices__offer-text">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу.
