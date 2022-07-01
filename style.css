@@ -113,6 +113,19 @@
   height: 88px;
   background-color: #ffffff; }
 
+.header__logo {
+  display: block;
+  width: 96px;
+  height: 50px;
+  margin: 0 1vh; }
+
+.header__divider {
+  width: 2px;
+  height: 30px;
+  background: #EAEAEA;
+  display: block;
+  margin: 0 auto 0 1vh; }
+
 .header__contacts {
   display: none;
   flex-direction: row;
@@ -134,22 +147,21 @@
   display: inline-block;
   list-style: none; }
 
-.header__logo {
-  display: block;
-  width: 96px;
-  height: 50px;
-  margin: 0 1vh; }
-
-.header__divider {
-  width: 2px;
-  height: 30px;
-  background: #EAEAEA;
-  display: block;
-  margin: 0 auto 0 1vh; }
-
 .header__button {
   margin: 0 1vh;
   transition-duration: 600ms; }
+
+@media screen and (min-width: 768px) {
+  .header__logo {
+    order: 2;
+    margin-left: 1vh;
+    margin-right: auto; }
+  .header__divider {
+    margin-right: 1vh; }
+  .header__contacts {
+    order: 2; }
+  .header__application {
+    order: 3; } }
 
 .content {
   display: flex;
