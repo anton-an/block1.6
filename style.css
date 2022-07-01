@@ -2,10 +2,11 @@
 /*colors*/
 /*fonts*/
 .page {
-  font-family: "TT Lakes", sans-serif;
-  font-size: 14px;
+  position: relative;
   min-height: 100%;
   margin: 0;
+  font-family: "TT Lakes", sans-serif;
+  font-size: 14px;
   background-color: #ffffff; }
 
 .page__content {
@@ -674,11 +675,12 @@
   margin-bottom: 24px;
   font-size: 14px; }
 
-.prices__table-heading {
+.prices__table-headings {
   display: none; }
 
 .prices__price {
-  flex-basis: 260px; }
+  flex-basis: 260px;
+  font-weight: 400; }
 
 .prices__pagination {
   top: 220px; }
@@ -719,8 +721,20 @@
   .prices__price {
     box-sizing: border-box;
     padding: 0 16px; }
-  .prices__table-heading {
-    display: flex; }
+  .prices__table-headings {
+    display: flex;
+    width: 95%;
+    padding: 0 16px;
+    color: #7E7E82; }
+  .prices__service-heading {
+    flex-basis: 63%;
+    font-weight: 400; }
+  .prices__value-heading {
+    flex-basis: 25%;
+    font-weight: 400; }
+  .prices__time-heading {
+    flex-basis: 35%;
+    font-weight: 400; }
   .prices__offer-text {
     padding: 0 24px;
     width: 420px;
@@ -795,7 +809,7 @@
     display: flex;
     flex-direction: row;
     flex-basis: 20%; }
-  .price__deadline {
+  .price__time {
     display: flex;
     flex-direction: row;
     align-items: center;
