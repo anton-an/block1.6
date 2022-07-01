@@ -6,11 +6,19 @@
   font-size: 14px;
   min-height: 100%;
   margin: 0;
+  background-color: #ffffff; }
+
+.page__content {
   background-color: #F8F8F8; }
 
 @media screen and (min-width: 1360px) {
   .page__content {
     display: flex; } }
+
+@media screen and (min-width: 1440px) {
+  .page {
+    width: 1440px;
+    margin: 0 auto; } }
 
 /*colors*/
 /*fonts*/
@@ -160,19 +168,23 @@
   padding: 0 16px; }
 
 .content__brands {
-  margin-bottom: 50px; }
+  margin-bottom: 20px; }
 
 .content__devices {
-  margin-bottom: 50px; }
+  margin-bottom: 20px; }
 
 .content__footer {
-  margin: 40px 0 0 0; }
+  margin: 40px 0 65px 0; }
 
 @media screen and (min-width: 768px) {
   .content__content-heading {
     padding: 24px 24px; }
   .content__about {
-    padding: 0 24px; } }
+    padding: 0 24px; }
+  .content__brands {
+    margin: 0; }
+  .content__devices {
+    margin: 0; } }
 
 @media screen and (min-width: 1360px) {
   .content__content-heading {
@@ -185,19 +197,8 @@
   font-size: 28px;
   font-weight: bold; }
 
-/*
-.title:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    background: #41F6D7;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    min-width: 4px;
-    height: 40px;
-}
-*/
 .title--small {
+  text-transform: uppercase;
   font-size: 16px;
   font-weight: 400;
   color: #7E7E82; }
@@ -286,24 +287,22 @@
   font-size: 1rem;
   white-space: nowrap; }
 
-.slide-menu__item:hover {
-  color: #F8F8F8; }
-
 .slide-menu__item--selected {
   padding: 8px;
   background-color: white;
   border: 2px solid #41F6D7;
   border-radius: 6px; }
 
-.slide-menu__item:hover {
-  padding: 8px;
-  background-color: #ffffff;
-  border: 2px solid #41F6D7;
-  border-radius: 6px; }
-
 .slide-menu__link {
   height: 40px;
   color: #7E7E82; }
+
+.slide-menu__link--active {
+  color: #7E7E82; }
+
+.slide-menu__link:hover {
+  height: 40px;
+  color: #DDDDDD; }
 
 @media screen and (min-width: 768px) {
   .slide-menu {
@@ -318,25 +317,24 @@
   flex-direction: column;
   justify-content: space-between; }
 
-.about__expand {
-  margin-bottom: 15px; }
-
-.about__expand-icon {
-  margin-right: 10px; }
-
 .about__text {
-  flex-basis: 50%;
-  margin: 0; }
+  overflow-y: hidden;
+  height: 115px; }
+
+.about__paragraph {
+  margin: 0 0 16px 0; }
 
 .about__image {
   width: 100%; }
 
 .about__expand-button {
+  display: block;
   margin: 10px 0 20px 0; }
 
 @media screen and (min-width: 768px) {
   .about__text {
-    padding: 0 48px 0 0; }
+    padding: 0 48px 0 0;
+    height: 200px; }
   .about__image {
     width: 50%; } }
 
@@ -348,31 +346,46 @@
     margin-bottom: 16px;
     padding: 0 34px; }
   .about__text {
-    padding: 0 36px 0 0; } }
+    padding: 0 36px 0 0;
+    height: 250px; } }
 
+/*colors*/
+/*fonts*/
 .expand-button {
   cursor: pointer;
-  background: transparent;
   border: none;
   font-family: "TT Lakes";
   font-size: 1rem;
   font-weight: 500;
+  background: transparent;
   color: #1B1C21; }
 
 .expand-button:hover {
   color: #7E7E82; }
 
-.expand-button__icon {
+.expand-button:before {
+  content: "";
   display: inline-block;
   transform: translate(-5px, 1px);
   width: 16px;
   height: 16px;
-  padding-right: 16px;
-  transition-duration: 500ms;
   background: url(./static/expand.svg) no-repeat center; }
 
+.expand-button--reversed:before {
+  content: "";
+  display: inline-block;
+  transform: translate(-5px, 1px) rotate(180deg);
+  width: 16px;
+  height: 16px;
+  background: url(./static/expand.svg) no-repeat center; }
+
+/*colors*/
+/*fonts*/
 .link {
   text-decoration: none; }
+
+.link--pink {
+  color: #FF3E79; }
 
 .image {
   width: 100%; }
@@ -382,7 +395,7 @@
 .left-modal {
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
@@ -446,18 +459,22 @@
   min-width: 4px;
   height: 40px; }
 
+.brands {
+  position: relative; }
+
 .brands__title {
   padding: 16px 16px; }
 
 .brands__slider {
   display: block;
   width: 95%;
-  height: 180px; }
+  height: 120px; }
 
 .brands__brands-list {
   align-content: flex-start;
   list-style: none;
-  padding: 0; }
+  padding: 0;
+  height: 80%; }
 
 .brands__brand {
   display: block;
@@ -474,6 +491,10 @@
 @media screen and (min-width: 768px) {
   .brands__title {
     padding: 16px 24px; }
+  .brands__slider {
+    height: 200px; }
+  .brands__slider--expanded {
+    height: 70%; }
   .brands__brands-list {
     justify-content: space-between;
     flex-wrap: wrap;
@@ -485,7 +506,9 @@
     margin: 16px 24px; }
   .brands__expand-button {
     display: block;
-    padding: 0 24px; } }
+    bottom: 0px;
+    padding: 0 24px;
+    margin: 24px 0 32px 0; } }
 
 @media screen and (min-width: 1360px) {
   .brands__title {
@@ -575,7 +598,7 @@
 
 .devices__slider {
   width: 95%;
-  height: 65%; }
+  height: 220px; }
 
 .devices__types {
   align-content: flex-start;
@@ -588,17 +611,20 @@
   max-height: 160px; }
 
 .devices__pagination {
-  top: 225px; }
+  top: 195px; }
 
 .devices__expand-button {
   display: none;
-  padding: 0 0 34px 40px; }
+  padding: 0 0 34px 40px;
+  margin: 24px 0 32px 0; }
 
 @media screen and (min-width: 768px) {
   .devices__heading {
     padding: 0 24px; }
   .devices__slider {
     height: 180px; }
+  .devices__slider--expanded {
+    height: 85%; }
   .devices__device-type {
     padding: 16px;
     margin: 16px 24px;
@@ -638,6 +664,7 @@
 
 .prices__slider {
   width: 95%;
+  height: 250px;
   margin-top: 24px; }
 
 .prices__prices-list {
@@ -654,7 +681,7 @@
   flex-basis: 260px; }
 
 .prices__pagination {
-  top: 215px; }
+  top: 220px; }
 
 .prices__offer-text {
   padding: 0 16px;
@@ -684,7 +711,8 @@
   .prices__title {
     padding: 0 24px; }
   .prices__slider {
-    display: block; }
+    display: block;
+    height: inherit; }
   .prices__prices-list {
     flex-direction: column;
     border-radius: 6px; }
@@ -714,7 +742,8 @@
   font-size: 14px;
   width: 260px;
   background-color: #ffffff;
-  border-radius: 6px; }
+  border-radius: 6px;
+  padding: 16px; }
 
 .price__title-row {
   text-align: left; }
@@ -744,6 +773,8 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
+    padding: 0 16px;
+    height: 64px;
     flex-basis: 64px; }
   .price__table-body {
     display: flex;
@@ -781,7 +812,7 @@
 /*fonts*/
 .right-modal {
   display: block;
-  position: absolute;
+  position: fixed;
   z-index: 3;
   top: 0;
   right: 0;
@@ -912,7 +943,8 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 0 0 16px 0; }
+  margin: 0 0 16px 0;
+  padding: 0 16px; }
 
 .call__accept-text {
   margin: 0 0 16px 0; }
@@ -928,7 +960,7 @@
 /*fonts*/
 .overlay {
   display: block;
-  position: absolute;
+  position: fixed;
   z-index: 3;
   top: 0;
   left: 0;
@@ -1091,7 +1123,7 @@
   overflow-y: hidden; }
 
 .expanded {
-  height: 80%; }
+  height: 100%; }
 
 @font-face {
   font-family: TT Lakes;
