@@ -1,0 +1,33 @@
+@import "variables";
+
+.expand-button {
+  cursor: pointer;
+  border: none;
+  font-family: "TT Lakes";
+  font-size: 1rem;
+  font-weight: 500;
+  background: transparent;
+  color: $black;
+}
+
+.expand-button:hover {
+  color: $gray-dark;
+}
+
+.expand-button:before {
+  content: "";
+  display: inline-block;
+  transform: translate(-5px, 1px);
+  width: 16px;
+  height: 16px;
+  background: url("../img/expand.svg") no-repeat center;
+}
+
+.expand-button--reversed:before {
+  content: "";
+  display: inline-block;
+  transform: translate(-5px, 1px) rotate(180deg);
+  width: 16px;
+  height: 16px;
+  background: url("../img/expand.svg") no-repeat center;
+}

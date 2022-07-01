@@ -1,0 +1,44 @@
+@import "highlight";
+
+.call {
+  display: block;
+  flex-direction: column;
+}
+
+.call__title {
+  margin: 0 0 24px 0;
+}
+
+.call__title:before {
+  content: "";
+  @include highlight;
+  transform: translate(-16px, -5px);
+}
+
+.call__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.call__tel-input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 0 16px 0;
+  padding: 0 16px;
+}
+
+.call__accept-text {
+  margin: 0 0 16px 0;
+}
+
+.call__submit-button {
+  align-self: flex-end;
+}
+
+@media screen and (min-width: 1360px) {
+  .call__title:before {
+    transform: translate(-32px, -5px);
+  }
+}
+

@@ -1,0 +1,21 @@
+@import "variables";
+
+.device-type {
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  width: 240px;
+  height: 160px;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: $white;
+  border: 1px solid $gray-lighter;
+  border-radius: 6px;
+}
+
+.device-type__button {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+}

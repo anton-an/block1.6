@@ -1,0 +1,61 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #F8F8F8;
+}
+
+.content__content-heading {
+  padding: 24px 16px;
+}
+
+.content__slide-menu {
+  padding: 0 16px;
+}
+
+.content__about {
+  margin-top: 20px;
+  margin-bottom: 16px;
+  padding: 0 16px;
+}
+
+.content__brands {
+  margin-bottom: 20px;
+}
+
+.content__devices {
+  margin-bottom: 20px;
+}
+
+.content__footer {
+  margin: 40px 0 65px 0;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  .content__content-heading {
+    padding: 24px 24px;
+  }
+
+  .content__about {
+    padding: 0 24px;
+  }
+
+  .content__brands {
+    margin: 0;
+  }
+
+  .content__devices {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1360px) {
+  .content__content-heading {
+    padding: 24px 34px;
+  }
+  .content__about {
+    padding: 0 34px;
+  }
+}

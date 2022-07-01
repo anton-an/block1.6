@@ -1,0 +1,52 @@
+@import "variables";
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  height: 85px;
+  padding: 32px 16px 0 16px;
+  border-top: 1px solid $cyan-light;
+  color: $gray-dark;
+}
+
+.footer__copyright {
+  margin: 0 0 16px 0;
+}
+
+.footer__privacy-link {
+  margin: 0 0 16px 0;
+  color: $gray-dark;
+}
+.footer__privacy-link:hover {
+  margin: 0 0 16px 0;
+  color: $gray;
+}
+
+.footer__disclaimer{
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 32px 24px 0 24px;
+  }
+
+  .footer__disclaimer{
+    margin: 0;
+    width: 330px;
+    height: 32px;
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: 1360px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 32px 34px 0 34px;
+  }
+}
+
+

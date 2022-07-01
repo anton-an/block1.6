@@ -1,0 +1,27 @@
+@import "variables";
+@import "highlight";
+
+.site-nav__item {
+  padding-bottom: 3vh;
+}
+
+.site-nav__link {
+  color: $black;
+  text-decoration: none;
+}
+
+.site-nav__link--selected {
+  position: relative;
+  color: $gray-dark;
+}
+
+.site-nav__link--selected:before {
+  content: "";
+  @include highlight;
+  height: 32px;
+  transform: translate(-24px, -5px);
+}
+
+.site-nav__link:hover {
+  color: #7E7E82;
+}

@@ -1,0 +1,131 @@
+@import "variables";
+
+.prices__title {
+  padding: 0 16px;
+}
+
+.prices__slider {
+  width: 95%;
+  height: 240px;
+  margin-top: 24px;
+}
+
+.prices__prices-list {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.prices__table-headings {
+  display: none;
+}
+
+.prices__price {
+  flex-basis: 260px;
+  font-weight: 400;
+}
+
+.prices__pagination {
+  top: 220px;
+}
+
+.prices__offer-text {
+  padding: 0 16px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.prices__offer-button {
+  font-family: $font;
+  font-size: 16px;
+  font-weight: 500;
+
+  text-align: left;
+  padding: 0 16px;
+
+  border: none;
+  background-color: transparent;
+}
+
+.prices__offer-btn-icon {
+  display: inline-block;
+  padding: 0 0 0 10px;
+  height: 9px;
+  width: 9px;
+  background: url("../img/arrow.svg") no-repeat center;
+}
+
+.prices__offer-button:hover {
+  color: $gray-dark;
+}
+
+@media screen and (min-width: 768px) {
+  .prices__title {
+    padding: 0 24px;
+  }
+
+  .prices__slider {
+    display: block;
+    height: inherit;
+  }
+
+  .prices__prices-list {
+    flex-direction: column;
+    border-radius: 6px;
+  }
+
+  .prices__price {
+    box-sizing: border-box;
+    padding: 0 16px;
+  }
+
+  .prices__table-headings {
+    display: flex;
+    width: 95%;
+    padding: 0 16px;
+    color: $gray-dark
+  }
+
+  .prices__service-heading {
+    flex-basis: 63%;
+    font-weight: 400;
+  }
+
+  .prices__value-heading {
+    flex-basis: 25%;
+    font-weight: 400;
+  }
+
+  .prices__time-heading {
+    flex-basis: 35%;
+    font-weight: 400;
+  }
+
+
+
+  .prices__offer-text {
+    padding: 0 24px;
+    width: 420px;
+    height: 60px;
+  }
+
+  .prices__offer-button {
+    padding: 0 24px;
+  }
+}
+
+@media screen and (min-width: 1360px) {
+  .prices__title {
+    padding: 0 34px;
+  }
+
+  .prices__offer-text {
+    padding: 0 34px;
+  }
+
+  .prices__offer-button {
+    padding: 0 34px;
+  }
+}

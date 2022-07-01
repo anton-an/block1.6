@@ -1,0 +1,60 @@
+@import "variables";
+
+.slide-menu__row {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 0;
+  margin: 0 3vw;
+  list-style-type: none;
+}
+
+.slide-menu__items {
+  display: flex;
+  overflow: scroll;
+  padding: 0;
+}
+
+.slide-menu__item {
+  display: inline-block;
+  max-height: 40px;
+  padding: 10px;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.slide-menu__item--selected {
+  padding: 8px;
+  background-color: white;
+  border: 2px solid $cyan;
+  border-radius: 6px;
+}
+
+.slide-menu__link {
+  height: 40px;
+  color: $gray-dark;
+}
+
+.slide-menu__link--active {
+  color: $gray-dark;
+}
+
+.slide-menu__link:hover {
+  height: 40px;
+  color: $gray;
+}
+
+@media screen and (min-width: 768px) {
+  .slide-menu {
+    padding: 0 24px;
+  }
+}
+
+
+@media screen and (min-width: 1360px) {
+  .slide-menu {
+    padding: 0 34px;
+  }
+}

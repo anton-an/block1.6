@@ -1,0 +1,28 @@
+@import "variables";
+
+.page {
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+  font-family: "TT Lakes", sans-serif;
+  font-size: 14px;
+  background-color: $white;
+}
+
+.page__content {
+  background-color: $gray-light;
+}
+
+@media screen and (min-width: 1360px) {
+  .page__content {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .page {
+    width: 1440px;
+    margin: 0 auto;
+  }
+}
+

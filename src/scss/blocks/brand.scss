@@ -1,0 +1,50 @@
+.brand {
+  display: block;
+  position: relative;
+  width: 240px;
+  height: 72px;
+  border: solid 1px #EAEAEA;
+  background: #ffffff;
+}
+
+.brand--lenovo {
+  background: url("../img/lenovo.png") 15% 50% no-repeat #ffffff;
+}
+
+.brand--samsung {
+  background: url("../img/samsung.png") 15% 50% no-repeat #ffffff;
+}
+
+.brand--hp {
+  background: url("../img/hp.png") 15% 50% no-repeat #ffffff;
+}
+
+.brand--bosch {
+  background: url("../img/bosch.png") 15% 50% no-repeat #ffffff;
+}
+
+.brand--apple {
+  background: url("../img/apple.png") 15% 40% no-repeat #ffffff;
+}
+
+.brand--acer {
+  background: url("../img/acer.png") 15% 50% no-repeat #ffffff;
+}
+
+.brand--viewsonic {
+  background: url("../img/viewsonic.png") 15% 50% no-repeat #ffffff;
+}
+
+.brand--sony {
+  background: url('../img/sony.png') 15% 50% no-repeat #ffffff;
+}
+
+.brand__button {
+  position: absolute;
+  right: 10%;
+  top: 20%;
+}
+
+
+
+

@@ -1,0 +1,76 @@
+@import "variables.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  align-items: center;
+  padding: 0 2vw;
+  margin: 0;
+  height: 88px;
+  background-color: $white;
+}
+
+.header__logo {
+  display: block;
+  width: 96px;
+  height: 50px;
+  margin: 0 1vh;
+}
+
+.header__divider {
+  width: 2px;
+  height: 30px;
+  background: $gray-lighter;
+  display: block;
+  margin: 0 auto 0 1vh;
+}
+
+.header__contacts {
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin-left: auto;
+}
+
+.header__application {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+
+.header__item {
+  display: inline-block;
+  list-style: none;
+}
+
+.header__button {
+  margin: 0 1vh;
+  transition-duration: 600ms;
+}
+
+@media screen and (min-width: 768px) {
+  .header__logo {
+    order: 2;
+    margin-left: 1vh;
+    margin-right: auto;
+  }
+
+  .header__divider {
+    margin-right: 1vh;
+  }
+
+  .header__contacts {
+    order: 2;
+  }
+
+  .header__application {
+    order: 3;
+  }
+}

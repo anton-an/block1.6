@@ -1,0 +1,22 @@
+@import "variables";
+
+.highlight {
+  position: absolute;
+  left: 0;
+  background: $cyan;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  min-width: 4px;
+  height: 40px;
+}
+
+@mixin highlight {
+  display: inline-block;
+  position: absolute;
+  width: 3px;
+  background: $cyan;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  min-width: 4px;
+  height: 40px;
+}

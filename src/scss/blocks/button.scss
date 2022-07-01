@@ -1,0 +1,92 @@
+@import "variables.scss";
+
+.button {
+  display: inline-block;
+  min-width: 40px;
+  min-height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: $pink;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition-duration: 600ms;
+}
+
+.button:hover {
+  transform: scale(110%);
+  filter: opacity(0.8);
+}
+
+.button--burger {
+  background-image:  url("../img/burger.svg");
+}
+
+.button--chat {
+  background-image: url("../img/chat.svg");
+}
+
+.button--call {
+  background-image: url("../img/call.svg");
+}
+
+.button--profile {
+  background-image: url("../img/profile.svg");
+}
+
+.button--repair {
+  background-image: url("../img/repair.svg");
+}
+
+.button--status {
+  background-image: url("../img/status.svg");
+}
+
+.button--close {
+  background-image: url("../img/close.svg");
+}
+
+.button--search {
+  background-image: url("../img/search.svg");
+}
+
+.button--select {
+  width: 40px;
+  height: 40px;
+  border: solid 2px $pink;
+  border-radius: 50%;
+  background-image: url("../img/arrow.svg");
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 500ms;
+}
+
+.button--select:hover {
+  transform: scale(120%);
+  filter: opacity(0.5);
+}
+
+.button--submit {
+  position: relative;
+  width: 136px;
+  height: 32px;
+  padding-left: 18px;
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 12px;
+  font-weight: bold;
+  border: none;
+  border-radius: 16px;
+  color: $white;
+  background-color: $pink;
+  background-image: url("../img/arrow-white.svg");
+  background-repeat: no-repeat;
+  background-position: 85% 50%;
+  transition-duration: 600ms;
+}
+
+.button--submit:hover {
+  filter: opacity(0.8);
+}
+
+

@@ -1,0 +1,95 @@
+@import "variables";
+
+.price {
+  font-size: 14px;
+  width: 260px;
+  height: 200px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  padding: 16px;
+}
+
+.price__title-row {
+  text-align: left;
+}
+
+.price__title {
+  padding: 0;
+  margin: 0 0 0 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #7E7E82;
+  opacity: 0.72;
+}
+
+.price__description {
+  padding: 0;
+  margin: 4px 0 0 0;
+}
+
+.price__button {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width: 119px;
+}
+
+@media screen and (min-width: 768px) {
+  .price {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0 16px;
+    height: 64px;
+    flex-basis: 64px;
+  }
+
+  .price__table-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid $gray-lighter;
+  }
+
+  .price__title-row {
+    display: none;
+  }
+
+  .price__service {
+    margin: 0 auto 0 0;
+    display: flex;
+    flex-direction: row;
+    flex-basis: 50%;
+  }
+
+  .price__value {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 20%;
+  }
+
+  .price__time {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  .price__text {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .price__table-cell {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .price__button {
+    position: static;
+  }
+}

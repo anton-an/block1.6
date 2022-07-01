@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+      <title>CPS</title>
+  </head>
+  <body class="page">
+    <header class="header">
+      <button class="header__button button--burger button" type='button'></button>
+      <a class="header__logo logo" href="index.html">
+        <img class="logo__image" src="./img/logo.svg" alt="CPS logo">
+      </a>
+      <span class="header__divider divider"></span>
+      <ul class="header__contacts">
+        <li class="header__item">
+          <button class="header__button button--call button" type="button"></button>
+        </li>
+        <li class="header__item">
+          <button class="header__button button--chat button" type="button"></button>
+        </li>
+        <li class="header__item">
+          <button class="header__button button--profile button" type="button"></button>
+        </li>
+        <li class="header__item">
+          <span class="header__divider divider"></span>
+        </li>
+      </ul>
+      <ul class="header__application">
+        <li class="header__item">
+          <a class="header__button button--repair button" href="#"></a>
+        </li>
+        <li class="header__item">
+          <a class="header__button button--status button" href="#"></a>
+        </li>
+      </ul>
+    </header>
+    <div class="left-modal disabled">
+      <header class="left-modal__header">
+        <button class="left-modal__close-button button--close button" href="#"></button>
+        <a class="left-modal__home-link" href="#">
+          <img class="left-modal__logo" src="./img/logo.svg">
+        </a>
+        <button class="left-modal__search-button button--search button" href="#"></button>
+      </header>
+      <section class="left-modal__menu">
+        <ul class="left-modal__site-nav site-nav">
+          <li class="site-nav__item">
+            <a class="site-nav__link--selected site-nav__link" href="#">Ремонт техники</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link link" href="#">Услуги и сервисы</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link link" href="#">Корпоративным клиентам</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link link" href="#" >Продавцам техники</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link link" href="#" >Партнерам</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link link" href="#" >Производителям</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link link" href="#">Наши сервисные центры</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link link" href="#" >Контакты</a>
+          </li>
+        </ul>
+      </section>
+      <section class="left-modal__contacts contacts">
+        <ul class="contacts__buttons">
+          <button class="contacts__call-button button--call button"></button>
+          <button class="contacts__feedback-button button--chat button"></button>
+          <a class="contacts__profile-button button--profile button" href="#"></a>
+        </ul>
+        <a class="contacts__email-link" href = "mailto:mail@cps.com">mail@cps.com</a>
+        <a class="contacts__phone-link" href = "tel:8-800-890-8900">8 800 890 8900</a>
+      </section>
+      <ul class="left-modal__lang-switcher lang-switcher">
+        <li class="lang-switcher__lang">
+          <a class="lang-switcher__lang-link--selected lang-switcher__lang-link" href="#">RU</a>
+        </li>
+        <li class="lang-switcher__lang">
+          <a class="lang-switcher__lang-link" href="#" >EN</a>
+        </li>
+        <li class="lang-switcher__lang">
+          <a class="lang-switcher__lang-link" href="#" >CH</a>
+        </li>
+      </ul>
+    </div>
+    <div class="overlay disabled"></div>
+    <main class="page__content content">
+      <div class="content__content-heading content-heading">
+        <h1 class="content-heading__title title">Услуги и сервисы</h1>
+        <ul class="content-heading__application">
+          <li class="content-heading__item">
+            <a class="content-heading__button--repair button--repair button" href=""></a>
+          </li>
+          <li class="content-heading__item">
+            <a class="content-heading__button--status button--status button" href=""></a>
+          </li>
+        </ul>
+      </div>
+      <nav class="content__slide-menu slide-menu">
+        <ul class="slide-menu__items">
+          <li class="slide-menu__item--selected slide-menu__item">
+            <a class="slide-menu__link--active link" href="#" >Ремонтируемые бренды</a>
+          </li>
+          <li class="slide-menu__item">
+            <a class="slide-menu__link link" href="#">Ремонтируемые устройства</a>
+          </li>
+          <li class="slide-menu__item">
+            <a class="slide-menu__link link" href="#">Дополнительные услуги</a>
+          </li>
+          <li class="slide-menu__item">
+            <a class="slide-menu__link link" href="#">Цены на услуги</a>
+          </li>
+          <li class="slide-menu__item">
+            <a class="slide-menu__link link" href="#">Адреса сервисных центров</a>
+          </li>
+          <li class="slide-menu__item">
+            <a class="slide-menu__link link" href="#">Специальные цены</a>
+          </li>
+          <li class="slide-menu__item">
+            <a class="slide-menu__link link" href="#">Отзывы</a>
+          </li>
+        </ul>
+      </nav>
+      <section class="content__about about">
+        <section class="about__description">
+          <div class="about__text">
+            <p class="about__paragraph">
+              Доге — интернет-мем, впервые ставший популярным в 2013 году. Обычно содержит фотографию собаки породы сиба-ину по имени Кабосу, часто с текстом на фотографии,
+              набранным в Comic Sans MS с использованием различных цветов.
+            </p>
+            <p class="about__paragraph">
+              Более поздние вариации мема с использованием фотографий сиба-ину происходят из блога Shiba Confessions в Tumblr.
+              Тем не менее первое использование намеренно неправильно произносимого «doge» относится к июню 2005 года, когда слово было упомянуто в интернет-сериале Homestar Runner.
+              В августе 2013 года изображения с мемом часто публиковались на сабреддит r/MURICA пользователями имиджборды /b/ в 4chan.
+            </p>
+            <p class="about__paragraph">
+              Поиск термина doge в Google Trends показывает быстрый рост популярности, появившийся в октябре 2013 года и продолжившийся в следующем месяце.
+              В ноябре 2013 года мем получил широкое распространение по всему Интернету. В дальнейшем Google создала пасхальное яйцо: когда doge meme набирается в поисковую строку YouTube,
+              весь текст на сайте отображается в разноцветном Comic Sans MS, похожем на используемый в меме (ныне не работает).
+            </p>
+          </div>
+          <button class="about__expand-button expand-button" type="button">
+            Читать далее
+          </button>
+        </section>
+        <img class="about__image" src="./img/CPS-photo.png" alt="CPS">
+      </section>
+      <section class="content__brands brands">
+        <div class="brands__heading section-heading">
+          <h2 class="brands__title title--small">Ремонт техники различных брендов</h2>
+        </div>
+        <div class="brands__slider swiper">
+          <ul class="brands__brands-list swiper-wrapper">
+            <li class="brands__brand brand brand--lenovo swiper-slide">
+              <button class="brand__button button--select"></button>
+            </li>
+            <li class="brands__brand brand brand--bosch swiper-slide">
+              <button class="brand__button button--select"></button>
+            </li>
+            <li class="brands__brand brand brand--sony swiper-slide">
+              <button class="brand__button button--select"></button>
+            </li>
+            <li class="brands__brand brand brand--apple swiper-slide">
+              <button class="brand__button button--select"></button>
+            </li>
+            <li class="brands__brand brand brand--samsung swiper-slide">
+              <button class="brand__button button--select"></button>
+            </li>
+            <li class="brands__brand brand brand--acer swiper-slide">
+              <button class="brand__button button--select"></button>
+            </li>
+            <li class="brands__brand brand brand--viewsonic swiper-slide">
+              <button class="brand__button button--select"></button>
+            </li>
+            <li class="brands__brand brand brand--hp swiper-slide">
+              <button class="brand__button button--select"></button>
+            </li>
+            <li class="brands__brand brand brand--apple swiper-slide">
+              <button class="brand__button button--select"></button>
+            </li>
+            <li class="brands__brand brand brand--lenovo swiper-slide">
+              <button class="brand__button button--select"></button>
+            </li>
+            <li class="brands__brand brand brand--acer swiper-slide">
+              <button class="brand__button button--select"></button>
+            </li>
+            <li class="brands__brand brand brand--sony swiper-slide">
+              <button class="brand__button button--select" type="button"></button>
+            </li>
+          </ul>
+          <div class="brands__pagination slider__pagination swiper-pagination"></div>
+        </div>
+        <button type="button" class="brands__expand-button  expand-button">
+          Показать все
+        </button>
+      </section>
+      <section class="content__devices devices">
+        <div class="devices__heading section-heading">
+          <h1 class="devices__title title--small">Ремонт различных видов техники</h1>
+        </div>
+        <div class="devices__slider slider swiper">
+          <ul class="devices__types slider__wrapper swiper-wrapper">
+            <li class="devices__device-type device-type slider__item swiper-slide">
+              <span class="device-type__text">Ремонт ноутбуков</span>
+              <button class="device-type__button button--select" type="button"></button>
+            </li>
+            <li class="devices__device-type device-type slider__item swiper-slide">
+              <span class="device-type__text">Ремонт планшетов</span>
+              <button class="device-type__button button--select" type="button"></button>
+            </li>
+            <li class="devices__device-type device-type slider__item swiper-slide">
+              <span class="device-type__text">Ремонт ПК</span>
+              <button class="device-type__button button--select" type="button"></button>
+            </li>
+            <li class="devices__device-type device-type slider__item swiper-slide">
+              <span class="device-type__text">Ремонт мониторов</span>
+              <button class="device-type__button button--select" type="button"></button>
+            </li>
+            <li class="devices__device-type device-type slider__item swiper-slide">
+              <span class="device-type__text">Ремонт планшетов</span>
+              <button class="device-type__button button--select" type="button"></button>
+            </li>
+            <li class="devices__device-type device-type slider__item swiper-slide">
+              <span class="device-type__text">Ремонт ноутбуков</span>
+              <button class="device-type__button button--select" type="button"></button>
+            </li>
+            <li class="devices__device-type device-type slider__item swiper-slide">
+              <span class="device-type__text">Ремонт ещё чего-нибудь</span>
+              <button class="device-type__button button--select" type="button"></button>
+            </li>
+            <li class="devices__device-type device-type slider__item swiper-slide">
+              <span class="device-type__text">Ремонт ещё чего-нибудь</span>
+              <button class="device-type__button button--select" type="button"></button>
+            </li>
+            <li class="devices__device-type device-type slider__item swiper-slide">
+              <span class="device-type__text">Ремонт ещё чего-нибудь</span>
+              <button class="device-type__button button--select" type="button"></button>
+            </li>
+            <li class="devices__device-type device-type slider__item swiper-slide">
+              <span class="device-type__text">Ремонт ещё чего-нибудь</span>
+              <button class="device-type__button button--select" type="button"></button>
+            </li>
+          </ul>
+          <div class="devices__pagination slider__pagination swiper-pagination"></div>
+        </div>
+        <button type="button" class="devices__expand-button  expand-button">
+          Показать все
+        </button>
+      </section>
+      <section class="content__prices prices">
+        <div class="prices__heading section-heading">
+          <h2 class="prices__title title--small">Цены на услуги</h2>
+        </div>
+        <div class="prices__slider slider swiper">
+          <div class="prices__prices-list slider__wrapper swiper-wrapper">
+            <div class="prices__table-headings">
+              <h4 class="prices__service-heading">
+                  Ремонтные услуги
+              </h4>
+              <h4 class="prices__value-heading">
+                Цена
+              </h4>
+              <h4 class="prices__time-heading">
+                Срок
+              </h4>
+            </div>
+            <table class="prices__price price slider__item swiper-slide">
+              <tbody class='price__table-body'>
+              <tr class="price__title-row">
+                <th class="price__service-title title--small">
+                  Ремонтные услуги
+                </th>
+              </tr>
+              <tr class="price__service">
+                <td class="price__text">
+                  Диагностика
+                </td>
+              </tr>
+              <tr class="price__title-row">
+                <th class="price__value-title title--small">
+                  Цена
+                </th>
+              </tr>
+              <tr class="price__value">
+                <td class="price__text">
+                  Бесплатно
+                </td>
+              </tr>
+              <tr class="price__title-row">
+                <th class="price__time-title title--small">
+                  Срок
+                </th>
+              </tr>
+              <tr class="price__time">
+                <td class="price__text">
+                  30-120 мин
+                </td>
+              </tr>
+              <tr class="price__order">
+                <td class="price__table-cell">
+                  <button class="price__button button--submit">
+                    Заказать
+                  </button>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+            <table class="prices__price price slider__item swiper-slide">
+              <tbody class='price__table-body'>
+              <tr class="price__title-row">
+                <th class="price__service-title title--small">
+                  Ремонтные услуги
+                </th>
+              </tr>
+              <tr class="price__service">
+                <td class="price__text">
+                  Замена дисплея
+                </td>
+              </tr>
+              <tr class="price__title-row">
+                <th class="price__value-title title--small">
+                  Цена
+                </th>
+              </tr>
+              <tr class="price__value">
+                <td class="price__text">
+                  1000 ₽
+                </td>
+              </tr>
+              <tr class="price__title-row">
+                <th class="price__time-title title--small">
+                  Срок
+                </th>
+              </tr>
+              <tr class="price__time">
+                <td class="price__text">
+                  30-120 мин
+                </td>
+              </tr>
+              <tr class="price__order">
+                <td class="price__table-cell">
+                  <button class="price__button button--submit">
+                    Заказать
+                  </button>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+            <table class="prices__price price slider__item swiper-slide">
+              <tbody class='price__table-body'>
+              <tr class="price__title-row">
+                <th class="price__service-title title--small">
+                  Ремонтные услуги
+                </th>
+              </tr>
+              <tr class="price__service">
+                <td class="price__text">
+                  Замена полифонического динамика
+                </td>
+              </tr>
+              <tr class="price__title-row">
+                <th class="price__value-title title--small">
+                  Цена
+                </th>
+              </tr>
+              <tr class="price__value">
+                <td class="price__text">
+                  1000 ₽
+                </td>
+              </tr>
+              <tr class="price__title-row">
+                <th class="price__time-title title--small">
+                  Срок
+                </th>
+              </tr>
+              <tr class="price__time">
+                <td class="price__text">
+                  30-120 мин
+                </td>
+              </tr>
+              <tr class="price__order">
+                <td class="price__table-cell">
+                  <button class="price__button button--submit">
+                    Заказать
+                  </button>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+            <table class="prices__price price slider__item swiper-slide">
+              <tbody class='price__table-body'>
+              <tr class="price__title-row">
+                <th class="price__service-title title--small">
+                  Ремонтные услуги
+                </th>
+              </tr>
+              <tr class="price__service">
+                <td class="price__text">
+                  Тестирование с выдачей технического заключения
+                </td>
+              </tr>
+              <tr class="price__title-row">
+                <th class="price__value-title title--small">
+                  Цена
+                </th>
+              </tr>
+              <tr class="price__value">
+                <td class="price__text">
+                  1000 ₽
+                </td>
+              </tr>
+              <tr class="price__title-row">
+                <th class="price__time-title title--small">
+                  Срок
+                </th>
+              </tr>
+              <tr class="price__time">
+                <td class="price__text">
+                  30-120 мин
+                </td>
+              </tr>
+              <tr class="price__order">
+                <td class="price__table-cell">
+                  <button class="price__button button--submit">
+                    Заказать
+                  </button>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+            <table class="prices__price price slider__item swiper-slide">
+              <tbody class='price__table-body'>
+              <tr class="price__title-row">
+                <th class="price__service-title title--small">
+                  Ремонтные услуги
+                </th>
+              </tr>
+              <tr class="price__service">
+                <td class="price__text">
+                  Замена программного обеспечения
+                </td>
+              </tr>
+              <tr class="price__title-row">
+                <th class="price__value-title title--small">
+                  Цена
+                </th>
+              </tr>
+              <tr class="price__value">
+                <td class="price__text">
+                  1000 ₽
+                </td>
+              </tr>
+              <tr class="price__title-row">
+                <th class="price__time-title title--small">
+                  Срок
+                </th>
+              </tr>
+              <tr class="price__time">
+                <td class="price__text">
+                  30-120 мин
+                </td>
+              </tr>
+              <tr class="price__order">
+                <td class="price__table-cell">
+                  <button class="price__button button--submit">
+                    Заказать
+                  </button>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+            <table class="prices__price price slider__item swiper-slide">
+              <tbody class='price__table-body'>
+              <tr class="price__title-row">
+                <th class="price__service-title title--small">
+                  Ремонтные услуги
+                </th>
+              </tr>
+              <tr class="price__service">
+                <td class="price__text">
+                  Диагностика за две тыщи
+                </td>
+              </tr>
+              <tr class="price__title-row">
+                <th class="price__value-title title--small">
+                  Цена
+                </th>
+              </tr>
+              <tr class="price__value">
+                <td class="price__text">
+                  2000 ₽
+                </td>
+              </tr>
+              <tr class="price__title-row">
+                <th class="price__time-title title--small">
+                  Срок
+                </th>
+              </tr>
+              <tr class="price__time">
+                <td class="price__text">
+                  30-120 мин
+                </td>
+              </tr>
+              <tr class="price__order">
+                <td class="price__table-cell">
+                  <button class="price__button button--submit">
+                    Заказать
+                  </button>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+            <table class="prices__price price slider__item swiper-slide">
+              <tbody class='price__table-body'>
+              <tr class="price__title-row">
+                <th class="price__service-title title--small">
+                  Ремонтные услуги
+                </th>
+              </tr>
+              <tr class="price__service">
+                <td class="price__text">
+                  Диагностика за пять тыщ
+                </td>
+              </tr>
+              <tr class="price__title-row">
+                <th class="price__value-title title--small">
+                  Цена
+                </th>
+              </tr>
+              <tr class="price__value">
+                <td class="price__text">
+                  5000 ₽
+                </td>
+              </tr>
+              <tr class="price__title-row">
+                <th class="price__time-title title--small">
+                  Срок
+                </th>
+              </tr>
+              <tr class="price__time">
+                <td class="price__text">
+                  30-120 мин
+                </td>
+              </tr>
+              <tr class="price__order">
+                <td class="price__table-cell">
+                  <button class="price__button button--submit">
+                    Заказать
+                  </button>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+            <table class="prices__price price slider__item swiper-slide">
+              <tbody class='price__table-body'>
+              <tr class="price__title-row">
+                <th class="price__service-title title--small">
+                  Ремонтные услуги
+                </th>
+              </tr>
+              <tr class="price__service">
+                <td class="price__text">
+                  Диагностика за восемь тыщ
+                </td>
+              </tr>
+              <tr class="price__title-row">
+                <th class="price__value-title title--small">
+                  Цена
+                </th>
+              </tr>
+              <tr class="price__value">
+                <td class="price__text">
+                  8000 ₽
+                </td>
+              </tr>
+              <tr class="price__title-row">
+                <th class="price__time-title title--small">
+                  Срок
+                </th>
+              </tr>
+              <tr class="price__time">
+                <td class="price__text">
+                  30-120 мин
+                </td>
+              </tr>
+              <tr class="price__order">
+                <td class="price__table-cell">
+                  <button class="price__button button--submit">
+                    Заказать
+                  </button>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="prices__pagination slider__pagination swiper-pagination"></div>
+        </div>
+        <p class="prices__offer-text">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу.
+          Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
+        <button class="prices__offer-button">
+          Получить коммерческое предложение
+          <span class="prices__offer-btn-icon"></span>
+        </button>
+      </section>
+      <footer class="content__footer footer">
+        <p class="footer__copyright">© 2019 CPS </br>
+          Разработано командой Apesong
+        </p>
+        <a class="footer__privacy-link link" href="#">Политика конфиденциальности</a>
+        <p class="footer__disclaimer">Информация, размещенная на данной странице, не является публичной офертой</p>
+      </footer>
+      <div class="right-modal disabled">
+        <button class="right-modal__close-button button button--close"></button>
+        <section class="feedback disabled">
+          <h1 class="feedback__title title--subtitle">
+            Обратная связь
+          </h1>
+          <form class="feedback__form" method="post">
+            <input class="feedback__name-input input-box" type="text" placeholder="Имя" required>
+            <input class="feedback__tel-input input-box" type="tel" placeholder="Телефон" required>
+            <input class="feedback__email-input input-box" type="email" placeholder="Электронная почта" required>
+            <textarea class="feedback__message-box text-area" rows="8" placeholder="Сообщение" required></textarea>
+            <p class="feedback__accept-text accept-text">
+              Нажимая “отправить”, вы даете согласие на <a class = "link--pink link" href="#">обработку персональных данных</a>
+              и соглашаетесь с нашей <a class="link--pink link" href="#">политикой конфиденциальности</a>
+            </p>
+            <input class="feedback__submit-button button--submit" type="submit" value="Отправить">
+          </form>
+        </section>
+        <section class="call disabled">
+          <h1 class="call__title">
+            Заказать звонок
+          </h1>
+          <form class="call__form" action="">
+            <input class="call__tel-input input-box" type="tel" placeholder="Телефон" required>
+            <p class="call__accept-text accept-text">
+              Нажимая “отправить”, вы даете согласие на <a class = "link--pink link" href="#">обработку персональных
+              данных</a> и соглашаетесь с нашей <a class = "link--pink link" href="#">политикой конфиденциальности</a>
+            </p>
+            <input class="call__submit-button button--submit" type="submit" value="Отправить" required>
+          </form>
+        </section>
+      </div>
+    </main>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  </body>
+</html>
