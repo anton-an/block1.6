@@ -664,7 +664,7 @@
 
 .prices__slider {
   width: 95%;
-  height: 250px;
+  height: 240px;
   margin-top: 24px; }
 
 .prices__prices-list {
@@ -741,6 +741,7 @@
 .price {
   font-size: 14px;
   width: 260px;
+  height: 200px;
   background-color: #ffffff;
   border-radius: 6px;
   padding: 16px; }
