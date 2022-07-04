@@ -1,95 +1,84 @@
 
-//Нажимаю на кнопку меню/обратной связи/звонка
-//Открывается соотв. модальное окно, в котором открывается нужная секция
+function modalHandler (buttonClass, modalClass, sectionClass) {
 
-//Сохраняю все кнопки с модалками в один nodelist
-
-
-function modalHandler () {
-
-  const burgerButtons = document.querySelectorAll('.button--burger');
-  const feedbackButtons = document.querySelectorAll('.button--chat');
-  const callButtons = document.querySelectorAll('.button--call');
-  const leftModal = document.querySelector('.left-modal');
-  const rightModal = document.querySelector('.right-modal');
-  const closeButtons = document.querySelectorAll('.button--close')
-  const overlay = document.querySelector('.overlay');
-  const feedbackSection = document.querySelector('.feedback');
-  const callSection = document.querySelector('.call');
-  const page = document.querySelector('.page');
-  const feedbackNameInput = feedbackSection.querySelector('.feedback__name-input');
-  const callTelInput = callSection.querySelector('.call__tel-input');
+  const modalsList = document.querySelectorAll('.modal');
+  const buttonsList = document.querySelectorAll('.toggle-modal');
+  const sectionsList = document.querySelectorAll('.modal-section');
 
   const disabled = 'disabled';
   const noscroll = 'noscroll';
 
-  overlay.addEventListener('click', function() {
-    if (!rightModal.classList.contains(disabled)) {
-      rightModal.classList.add(disabled)
-      overlay.classList.add(disabled)
-      page.classList.remove(noscroll)
-    } else if (!leftModal.classList.contains(disabled)) {
-      leftModal.classList.add(disabled)
-      overlay.classList.add(disabled)
-      page.classList.remove(noscroll)
-    }
-  });
+  for (let i = 0; i < buttonsList.length; i++) {
+    if (buttonsList[i].classList.contains(buttonClass)) {
+      buttonsList[i].addEventListener('click', function() {
+          toggleModal(modalsList);
+          toggleSection(sectionsList);
+      });
+    };
+  };
 
-  function buttonsHandler(buttons) {
-    for (let i = 0; i < buttons.length; i++) {
-      if (buttons === burgerButtons) {
-        buttons[i].addEventListener('click', function() {
-          leftModal.classList.remove(disabled)
-          overlay.classList.remove(disabled)
-          page.classList.add(noscroll)
+  function toggleModal (modals) {
+
+    const overlay = document.querySelector('.overlay');
+    const page = document.querySelector('.page');
+
+    for (let i = 0; i < modals.length; i++) {
+
+      let currentModal = modals[i];
+
+      function openModal () {
+        currentModal.classList.remove(disabled);
+        overlay.classList.remove(disabled);
+        page.classList.add(noscroll);
+      };
+
+      function closeModal () {
+        currentModal.classList.add(disabled);
+        overlay.classList.add(disabled);
+        page.classList.remove(noscroll);
+      };
+
+      if (modalClass !== undefined
+          && currentModal.classList.contains(modalClass)
+          && currentModal.classList.contains(disabled)) {
+        openModal();
+        page.addEventListener('keydown', function(event){
+          if (event.key === "Escape") {
+            closeModal();
+          };
         });
-      } else if (buttons === feedbackButtons) {
-        buttons[i].addEventListener('click', function() {
-          if (!leftModal.classList.contains(disabled)) {
-            leftModal.classList.add(disabled)
-          }
-          rightModal.classList.remove(disabled)
-          feedbackSection.classList.remove(disabled)
-          feedbackNameInput.focus()
-          callSection.classList.add(disabled)
-          overlay.classList.remove(disabled)
-          page.classList.add(noscroll)
-        });
-      } else if (buttons === callButtons) {
-        buttons[i].addEventListener('click', function() {
-          if (!leftModal.classList.contains(disabled)) {
-            leftModal.classList.add(disabled)
-          }
-          rightModal.classList.remove(disabled)
-          callSection.classList.remove(disabled)
-          callTelInput.focus()
-          feedbackSection.classList.add(disabled)
-          overlay.classList.remove(disabled)
-          page.classList.add(noscroll)
-        });
-      } else if (buttons === closeButtons) {
-        buttons[i].addEventListener('click', function() {
-          if (!rightModal.classList.contains(disabled)) {
-            rightModal.classList.add(disabled)
-            overlay.classList.add(disabled)
-            page.classList.remove(noscroll)
-          } else if (!leftModal.classList.contains(disabled)) {
-            if (!leftModal.classList.contains(disabled)) {
-              leftModal.classList.add(disabled)
-              page.classList.remove(noscroll)
-            }
-            leftModal.classList.add(disabled)
-            overlay.classList.add(disabled)
-            page.classList.remove(noscroll)
-          }
-        });
+        overlay.addEventListener('click', function(event){
+          closeModal();
+        })
+      } else if (!currentModal.classList.contains(disabled)) {
+        closeModal();
+      };
+
+    };
+  };
+
+  function toggleSection (sections) {
+    for (let i = 0; i < sections.length; i++) {
+
+      let currentSection = sections[i];
+      const autoFocused = currentSection.querySelector('.auto-focused');
+
+      if (sectionClass !== undefined
+          && currentSection.classList.contains(sectionClass)
+          && currentSection.classList.contains(disabled) !== false) {
+        currentSection.classList.remove(disabled);
+        if (autoFocused !== undefined) {
+          autoFocused.focus();
+        };
+      } else {
+        currentSection.classList.add(disabled);
       };
     };
   };
 
-  buttonsHandler(burgerButtons);
-  buttonsHandler(feedbackButtons);
-  buttonsHandler(callButtons);
-  buttonsHandler(closeButtons);
-}
-modalHandler();
+};
+
+modalHandler('button--burger', 'left-sidebar')
+modalHandler('button--call', 'right-sidebar', 'call')
+modalHandler('button--chat', 'right-sidebar', 'feedback')
+modalHandler('button--close')

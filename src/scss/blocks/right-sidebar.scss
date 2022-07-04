@@ -1,9 +1,10 @@
-@import "variables.scss";
+@import "src/scss/variables";
 
-.right-modal {
+.right-sidebar {
   display: block;
   position: fixed;
   z-index: 3;
+  overflow-y: scroll;
   top: 0;
   right: 0;
   bottom: 0;
@@ -15,18 +16,18 @@
   box-shadow: 16px 0px 52px $shadow-color;
 }
 
-.right-modal__close-button {
+.right-sidebar__close-button {
   margin: 24px 0 32px 0;
 }
 
 @media screen and (min-width: 1360px) {
-  .right-modal {
+  .right-sidebar {
     width: 440px;
     padding: 40px 32px 0 32px;
     border-left: 1px solid $cyan-light;
   }
 
-  .right-modal__close-button {
+  .right-sidebar__close-button {
     position: absolute;
     z-index: 3;
     top: 10px;

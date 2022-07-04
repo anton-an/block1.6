@@ -1,0 +1,9 @@
+.email-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.email-link:hover {
+  color: $gray-dark;
+}

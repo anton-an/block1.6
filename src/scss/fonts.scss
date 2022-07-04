@@ -1,0 +1,22 @@
+@font-face {
+  font-family: TT Lakes;
+  src: url("../fonts/TTLakes-Regular.woff") format("woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: TT Lakes;
+  src: url("../fonts/TTLakes-Medium.woff") format("woff");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: TT Lakes;
+  src: url("../fonts/TTLakes-Bold.woff") format("woff");
+  font-weight: 600;
+}
+
+$font-content: 14px;
+$font-title-small: 16px;
+$font-title-medium: 24px;
+$font-title-medium: 28px;

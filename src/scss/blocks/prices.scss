@@ -1,4 +1,4 @@
-@import "variables";
+@import "src/scss/variables";
 
 .prices__title {
   padding: 0 16px;
@@ -12,8 +12,6 @@
 
 .prices__prices-list {
   position: relative;
-  list-style: none;
-  padding: 0;
   margin-bottom: 24px;
   font-size: 14px;
 }

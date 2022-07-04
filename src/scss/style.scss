@@ -10,7 +10,7 @@
 @import "blocks/expand-button";
 @import "blocks/link";
 @import "blocks/image";
-@import "blocks/left-modal";
+@import "blocks/left-sidebar";
 @import "blocks/highlight";
 @import "blocks/brands";
 @import "blocks/brand";
@@ -20,67 +20,21 @@
 @import "blocks/device-type";
 @import "blocks/prices";
 @import "blocks/price";
-@import "blocks/right-modal";
+@import "blocks/right-sidebar";
 @import "blocks/feedback";
 @import "blocks/call";
 @import "blocks/overlay";
 @import "blocks/disabled";
 @import "blocks/input-box";
 @import "blocks/text-area";
-@import "blocks/variables";
+@import "variables";
 @import "blocks/site-nav";
-@import "blocks/lang-switcher";
+@import "blocks/languages";
 @import "blocks/footer";
 @import "blocks/contacts";
-@import "blocks/noscroll";
-@import "blocks/expanded";
+@import "blocks/email-link";
+@import "blocks/phone-link";
+@import "noscroll";
+@import "expanded";
+@import "normalize";
 
-
-@font-face {
-    font-family: TT Lakes;
-    src: url("../fonts/TTLakes-Regular.woff") format("woff");
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: TT Lakes;
-    src: url("../fonts/TTLakes-Medium.woff") format("woff");
-    font-weight: 500;
-}
-
-@font-face {
-    font-family: TT Lakes;
-    src: url("../fonts/TTLakes-Bold.woff") format("woff");
-    font-weight: 600;
-}
-
-@media screen and (min-width: 768px){
-
-    .about {
-        flex-direction: row;
-        align-items: flex-start;
-    }
-
-    .header__contacts {
-        display: flex;
-    }
-
-}
-
-@media screen and (min-width: 1360px){
-  .header {
-      display: none;
-  }
-
-  .slide-menu__items {
-      overflow-x: hidden;
-      flex-wrap: wrap;
-  }
-
-  .page {
-    display: grid;
-    grid-template-columns: 320px 1fr;
-    max-width: 100vw;
-  }
-
-}

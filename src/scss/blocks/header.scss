@@ -1,4 +1,4 @@
-@import "variables.scss";
+@import "src/scss/variables";
 
 .header {
   display: flex;
@@ -15,7 +15,17 @@
   display: block;
   width: 96px;
   height: 50px;
-  margin: 0 1vh;
+  margin: 0 auto 0 1vh;
+}
+
+.header__logo:after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 30px;
+  transform: translate(110px, -45px);
+  background: $gray-lighter;
+  margin: 0 auto 0 1vh;
 }
 
 .header__divider {
@@ -23,7 +33,7 @@
   height: 30px;
   background: $gray-lighter;
   display: block;
-  margin: 0 auto 0 1vh;
+  margin: 0 auto 0 1vw;
 }
 
 .header__contacts {
@@ -56,10 +66,15 @@
 }
 
 @media screen and (min-width: 768px) {
+
   .header__logo {
     order: 2;
-    margin-left: 1vh;
-    margin-right: auto;
+    margin: 0 auto 0 2vw;
+  }
+
+  .header__logo:after {
+    content: "";
+    transform: translate(-20px, -45px);
   }
 
   .header__divider {
@@ -67,10 +82,29 @@
   }
 
   .header__contacts {
+    display: flex;
     order: 2;
+  }
+
+  .header__contacts:after {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 30px;
+    background: $gray-lighter;
+    margin: 0 1vh 0 2vh;
   }
 
   .header__application {
     order: 3;
   }
+
+}
+
+@media screen and (min-width: 1360px) {
+
+  .header {
+    display: none;
+  }
+
 }

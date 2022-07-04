@@ -1,0 +1,18 @@
+@import "src/scss/variables";
+
+.languages__lang {
+  display: inline-block;
+}
+
+.languages__lang-link {
+  text-decoration: none;
+  color: $black;
+}
+
+.languages__lang-link:hover {
+  color: $gray-dark;
+}
+
+.languages__lang-link--selected {
+  color: $gray-dark;
+}

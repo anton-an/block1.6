@@ -10,7 +10,7 @@
 }
 
 .content__slide-menu {
-  padding: 0 16px;
+  padding: 0 0 0 16px;
 }
 
 .content__about {
@@ -52,6 +52,12 @@
 }
 
 @media screen and (min-width: 1360px) {
+  .about {
+    margin-top: 20px;
+    margin-bottom: 16px;
+    padding: 0 34px;
+  }
+
   .content__content-heading {
     padding: 24px 34px;
   }
