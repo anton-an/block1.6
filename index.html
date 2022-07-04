@@ -9,23 +9,19 @@
   <link href="style.css" rel="stylesheet"></head>
   <body class="page">
     <header class="header">
-      <button class="header__button button--burger button" type="button"></button>
+      <button class="header__button button--burger button toggle-modal" type="button"></button>
       <a class="header__logo logo" href="index.html">
         <img class="logo__image" src="./img/logo.svg" alt="CPS logo">
       </a>
-      <span class="header__divider divider"></span>
-      <ul class="header__contacts">
-        <li class="header__item">
-          <button class="header__button button--call button" type="button"></button>
+      <ul class="header__contacts contacts">
+        <li class="contacts__item">
+          <button class="contacts__call-button button--call button toggle-modal" type="button"></button>
         </li>
-        <li class="header__item">
-          <button class="header__button button--chat button" type="button"></button>
+        <li class="contacts__item">
+          <button class="contacts__feedback-button button--chat button toggle-modal" type="button"></button>
         </li>
-        <li class="header__item">
-          <button class="header__button button--profile button" type="button"></button>
-        </li>
-        <li class="header__item">
-          <span class="header__divider divider"></span>
+        <li class="contacts__item">
+          <button class="contacts__profile-button button--profile button" type="button"></button>
         </li>
       </ul>
       <ul class="header__application">
@@ -37,16 +33,16 @@
         </li>
       </ul>
     </header>
-    <div class="left-modal disabled">
-      <header class="left-modal__header">
-        <button class="left-modal__close-button button--close button" href="#"></button>
-        <a class="left-modal__home-link" href="#">
-          <img class="left-modal__logo" src="./img/logo.svg">
+    <div class="left-sidebar modal disabled">
+      <header class="left-sidebar__header">
+        <button class="left-sidebar__close-button button--close button toggle-modal" href="#"></button>
+        <a class="left-sidebar__home-link" href="#">
+          <img class="left-sidebar__logo" src="./img/logo.svg">
         </a>
-        <button class="left-modal__search-button button--search button" href="#"></button>
+        <button class="left-sidebar__search-button button--search button" href="#"></button>
       </header>
-      <section class="left-modal__menu">
-        <ul class="left-modal__site-nav site-nav">
+      <nav class="left-sidebar__menu">
+        <ul class="left-sidebar__site-nav site-nav">
           <li class="site-nav__item">
             <a class="site-nav__link--selected site-nav__link" href="#">Ремонт техники</a>
           </li>
@@ -72,25 +68,31 @@
             <a class="site-nav__link link" href="#">Контакты</a>
           </li>
         </ul>
-      </section>
-      <section class="left-modal__contacts contacts">
+      </nav>
+      <nav class="left-sidebar__contacts contacts">
         <ul class="contacts__buttons">
-          <button class="contacts__call-button button--call button"></button>
-          <button class="contacts__feedback-button button--chat button"></button>
-          <a class="contacts__profile-button button--profile button" href="#"></a>
+          <li class="contacts__item">
+            <button class="contacts__call-button button--call button toggle-modal"></button>
+          </li>
+          <li class="contacts__item">
+            <button class="contacts__feedback-button button--chat button toggle-modal"></button>
+          </li>
+          <li class="contacts__item">
+            <a class="contacts__profile-button button--profile button" href="#"></a>
+          </li>
         </ul>
-        <a class="contacts__email-link" href="mailto:mail@cps.com">mail@cps.com</a>
-        <a class="contacts__phone-link" href="tel:8-800-890-8900">8 800 890 8900</a>
-      </section>
-      <ul class="left-modal__lang-switcher lang-switcher">
-        <li class="lang-switcher__lang">
-          <a class="lang-switcher__lang-link--selected lang-switcher__lang-link" href="#">RU</a>
+        <a class="contacts__email email-link" href="mailto:mail@cps.com">mail@cps.com</a>
+        <a class="contacts__phone phone-link" href="tel:8-800-890-8900">8 800 890 8900</a>
+      </nav>
+      <ul class="left-sidebar__languages languages">
+        <li class="languages__lang">
+          <a class="languages__lang-link--selected languages__lang-link" href="#">RU</a>
         </li>
-        <li class="lang-switcher__lang">
-          <a class="lang-switcher__lang-link" href="#">EN</a>
+        <li class="languages__lang">
+          <a class="languages__lang-link" href="#">EN</a>
         </li>
-        <li class="lang-switcher__lang">
-          <a class="lang-switcher__lang-link" href="#">CH</a>
+        <li class="languages__lang">
+          <a class="languages__lang-link" href="#">CH</a>
         </li>
       </ul>
     </div>
@@ -133,34 +135,34 @@
         </ul>
       </nav>
       <section class="content__about about">
-        <section class="about__description">
-          <div class="about__text">
-            <p class="about__paragraph">
-              Доге — интернет-мем, впервые ставший популярным в 2013 году. Обычно содержит фотографию собаки породы сиба-ину по имени Кабосу, часто с текстом на фотографии,
-              набранным в Comic Sans MS с использованием различных цветов.
-            </p>
-            <p class="about__paragraph">
-              Более поздние вариации мема с использованием фотографий сиба-ину происходят из блога Shiba Confessions в Tumblr.
-              Тем не менее первое использование намеренно неправильно произносимого «doge» относится к июню 2005 года, когда слово было упомянуто в интернет-сериале Homestar Runner.
-              В августе 2013 года изображения с мемом часто публиковались на сабреддит r/MURICA пользователями имиджборды /b/ в 4chan.
-            </p>
-            <p class="about__paragraph">
-              Поиск термина doge в Google Trends показывает быстрый рост популярности, появившийся в октябре 2013 года и продолжившийся в следующем месяце.
-              В ноябре 2013 года мем получил широкое распространение по всему Интернету. В дальнейшем Google создала пасхальное яйцо: когда doge meme набирается в поисковую строку YouTube,
-              весь текст на сайте отображается в разноцветном Comic Sans MS, похожем на используемый в меме (ныне не работает).
-            </p>
-          </div>
-          <button class="about__expand-button expand-button" type="button">
-            Читать далее
-          </button>
-        </section>
         <img class="about__image" src="./img/CPS-photo.png" alt="CPS">
+        <div class="about__description collapsible">
+          <p class="about__text">
+            Доге — интернет-мем, впервые ставший популярным в 2013 году. Обычно содержит фотографию собаки
+            породы сиба-ину по имени Кабосу, часто с текстом на фотографии,
+            набранным в Comic Sans MS с использованием различных цветов.
+          </p>
+          <p class="about__text">
+            Более поздние вариации мема с использованием фотографий сиба-ину происходят из блога Shiba Confessions в Tumblr.
+            Тем не менее первое использование намеренно неправильно произносимого «doge» относится к июню 2005 года,
+            когда слово было упомянуто в интернет-сериале Homestar Runner.
+          </p>
+          <p class="about__text">
+          В августе 2013 года изображения с мемом часто публиковались на сабреддит r/MURICA пользователями имиджборды /b/ в 4chan.
+          Поиск термина doge в Google Trends показывает быстрый рост популярности, появившийся в октябре 2013 года и продолжившийся в следующем месяце.
+          В ноябре 2013 года мем получил широкое распространение по всему Интернету. В дальнейшем Google создала пасхальное яйцо: когда doge meme набирается в поисковую строку YouTube,
+          весь текст на сайте отображается в разноцветном Comic Sans MS, похожем на используемый в меме (ныне не работает).
+          </p>
+        </div>
+        <button class="about__expand-button expand-button" type="button">
+          Читать далее
+        </button>
       </section>
       <section class="content__brands brands">
         <div class="brands__heading section-heading">
           <h2 class="brands__title title--small">Ремонт техники различных брендов</h2>
         </div>
-        <div class="brands__slider swiper">
+        <div class="brands__slider swiper collapsible">
           <ul class="brands__brands-list swiper-wrapper">
             <li class="brands__brand brand brand--lenovo swiper-slide">
               <button class="brand__button button--select"></button>
@@ -209,7 +211,7 @@
         <div class="devices__heading section-heading">
           <h1 class="devices__title title--small">Ремонт различных видов техники</h1>
         </div>
-        <div class="devices__slider slider swiper">
+        <div class="devices__slider slider collapsible swiper">
           <ul class="devices__types slider__wrapper swiper-wrapper">
             <li class="devices__device-type device-type slider__item swiper-slide">
               <span class="device-type__text">Ремонт ноутбуков</span>
@@ -620,14 +622,14 @@
         <a class="footer__privacy-link link" href="#">Политика конфиденциальности</a>
         <p class="footer__disclaimer">Информация, размещенная на данной странице, не является публичной офертой</p>
       </footer>
-      <div class="right-modal disabled">
-        <button class="right-modal__close-button button button--close"></button>
-        <section class="feedback disabled">
-          <h1 class="feedback__title title--subtitle">
+      <div class="right-sidebar modal disabled">
+        <button class="right-sidebar__close-button button--close button toggle-modal"></button>
+        <section class="feedback modal-section disabled">
+          <h2 class="feedback__title">
             Обратная связь
-          </h1>
+          </h2>
           <form class="feedback__form" method="post">
-            <input class="feedback__name-input input-box" type="text" placeholder="Имя" required>
+            <input class="feedback__name-input input-box auto-focused" type="text" placeholder="Имя" required>
             <input class="feedback__tel-input input-box" type="tel" placeholder="Телефон" required>
             <input class="feedback__email-input input-box" type="email" placeholder="Электронная почта" required>
             <textarea class="feedback__message-box text-area" rows="8" placeholder="Сообщение" required></textarea>
@@ -635,20 +637,20 @@
               Нажимая “отправить”, вы даете согласие на <a class="link--pink link" href="#">обработку персональных данных</a>
               и соглашаетесь с нашей <a class="link--pink link" href="#">политикой конфиденциальности</a>
             </p>
-            <input class="feedback__submit-button button--submit" type="submit" value="Отправить">
+            <button class="feedback__submit-button button--submit" type="submit" value="Отправить"></button>
           </form>
         </section>
-        <section class="call disabled">
-          <h1 class="call__title">
+        <section class="call modal-section disabled">
+          <h2 class="call__title">
             Заказать звонок
-          </h1>
+          </h2>
           <form class="call__form" action="">
-            <input class="call__tel-input input-box" type="tel" placeholder="Телефон" required>
+            <input class="call__tel-input input-box auto-focused" type="tel" placeholder="Телефон" required>
             <p class="call__accept-text accept-text">
               Нажимая “отправить”, вы даете согласие на <a class="link--pink link" href="#">обработку персональных
               данных</a> и соглашаетесь с нашей <a class="link--pink link" href="#">политикой конфиденциальности</a>
             </p>
-            <input class="call__submit-button button--submit" type="submit" value="Отправить" required>
+            <button class="call__submit-button button--submit" type="submit" value="Отправить"></button>
           </form>
         </section>
       </div>
